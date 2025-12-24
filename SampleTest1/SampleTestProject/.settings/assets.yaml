@@ -1,0 +1,73 @@
+name: SampleTestProject
+version: 2
+projectReferences: 
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /SampleTestProject/src
+        type: javaClasspath
+  - name: 'Compound Tests'
+    resources: 
+  - name: Datasets
+    resources: 
+  - name: Results
+    resources: 
+      - name: SampleTestScript1_1766552410559.stats
+        type: com.ibm.rational.test.lt.stats.session
+        properties: 
+          startTime: 1766552410559
+          tags: 
+          testId: A1F0E0856452B720FC45B43566383761
+          testName: SampleTestScript1
+        dependencies: 
+          - path: /SampleTestProject/Results/SampleTestScript1_1766552410559.xmoebreport
+            type: statsSessionAsset
+          - path: /SampleTestProject/Results/SampleTestScript1_1766552410559_orch!system.mstats
+            type: statsSessionStore
+          - path: /SampleTestProject/Results/SampleTestScript1_1766552410559_orch!system.rstats
+            type: statsSessionStore
+          - path: /SampleTestProject/Results/SampleTestScript1_1766552410559_perf!localhost.mstats
+            type: statsSessionStore
+          - path: /SampleTestProject/Results/SampleTestScript1_1766552410559_perf!localhost.rstats
+            type: statsSessionStore
+          - path: /SampleTestProject/Results/SampleTestScript1_1766552415885.executiondlr
+            type: statsSessionAsset
+          - path: /SampleTestProject/Tests/SampleTestScript1.testsuite
+            type: statsSessionTest
+      - name: SampleTestScript1_1766552410559.xmoebreport
+      - name: SampleTestScript1_1766552410559_orch!system.mstats
+      - name: SampleTestScript1_1766552410559_orch!system.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: SampleTestScript1_1766552410559_perf!localhost.mstats
+      - name: SampleTestScript1_1766552410559_perf!localhost.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: SampleTestScript1_1766552415885.executiondlr
+  - name: Tests
+    resources: 
+      - name: SampleTestScript1.recdata
+      - name: SampleTestScript1.recsession
+        type: com.ibm.rational.test.lt.recsession
+        dependencies: 
+          - path: /SampleTestProject/Tests/SampleTestScript1.recdata
+            type: recsessionRecdata
+      - name: SampleTestScript1.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.6.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1F0E0856452B720FC45B43566383761
+        dependencies: 
+          - path: /SampleTestProject/Tests/SampleTestScript1.recsession
+            type: testRecsession
+          - path: /SampleTestProject/pectran_com_b57.ma
+            type: test#moeb.applicationPackage
+  - name: pectran_com_b57.ma
+    type: moeb.applicationPackage
+  - name: src
+    resources: 
+      - name: test
+        resources: 
+          - name: SampleTestScript1_Test_A1F0E0856452B720FC45B43566383761.java
+            type: com.ibm.rational.test.lt.generatedCode

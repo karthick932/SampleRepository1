@@ -1,0 +1,7 @@
+#safe table
+#Wed Dec 24 10:35:15 IST 2025
+registry=registry-2
+.projects\\SampleProject1=IGNORE
+.projects\\SampleTestScript=IGNORE
+.projects\\SampleTestProject=.projects\\SampleTestProject.18
+knownProjects=knownProjects-18
